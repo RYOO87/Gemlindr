@@ -61,7 +61,12 @@ export async function GET(
       stores,
     };
 
-    return NextResponse.json(body);
+    return NextResponse.json(body, {
+      headers: {
+        // 게임 상세도 방문자 간 엣지 캐시 공유 — RAWG 무료 한도 보호
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+      },
+    });
   } catch (e) {
     if (e instanceof RawgError) {
       return NextResponse.json(

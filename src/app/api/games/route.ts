@@ -69,7 +69,15 @@ export async function GET(request: NextRequest) {
       if (!data.next) break;
     }
 
-    return NextResponse.json({ games });
+    return NextResponse.json(
+      { games },
+      {
+        headers: {
+          // 같은 달을 보는 모든 방문자가 엣지 캐시를 공유 — RAWG 무료 한도 보호
+          "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+        },
+      },
+    );
   } catch (e) {
     if (e instanceof RawgError) {
       return NextResponse.json(
