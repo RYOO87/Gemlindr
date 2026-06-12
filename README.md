@@ -2,6 +2,8 @@
 
 > **"이번 달에 뭐 나오지?"** 를 끝내는 단 한 장의 달력.
 
+**👉 바로 사용하기: https://gemlindr.vercel.app** — 설치도, 가입도, API 키도 필요 없습니다.
+
 기대작 출시일은 스팀, 에픽, PSN, 닌텐도 스토어에 뿔뿔이 흩어져 있습니다.
 Gemlindr는 모든 플랫폼의 출시 예정작을 **스타일리쉬한 다크 달력 한 장**에 모으고,
 마음에 드는 게임은 **버튼 한 번으로 내 캘린더에** 넣어줍니다. 이제 출시일을 놓칠 핑계가 없습니다.
@@ -36,11 +38,13 @@ Gemlindr는 모든 플랫폼의 출시 예정작을 **스타일리쉬한 다크 
 
 DB 없음, 로그인 없음, 크롤러 없음. 가장 좁은 끝-에서-끝 경로(Phase 0)만 깎았습니다.
 
-## 🚀 시작하기
+## 🚀 직접 돌려보기 (개발자용)
+
+서비스는 위 URL에서 그냥 쓰면 되고, 코드를 직접 돌리고 싶다면:
 
 ```bash
-git clone https://github.com/<your-account>/gemlindr.git
-cd gemlindr
+git clone https://github.com/RYOO87/Gemlindr.git
+cd Gemlindr
 npm install
 ```
 
